@@ -1,12 +1,11 @@
-import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { candidate } from "@/content/candidate";
 
 const positions = [
-  "md:col-span-4 md:row-start-1",
-  "md:col-start-10 md:col-span-3 md:row-start-1",
-  "md:col-start-10 md:col-span-3 md:row-start-2",
+  "md:col-span-5",
+  "md:col-span-3 md:mt-20",
+  "md:col-span-4 md:mt-8",
 ] as const;
 
 export function Trajectory() {
@@ -20,27 +19,15 @@ export function Trajectory() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-12 md:grid-rows-2 md:gap-5">
-          <Reveal className="order-first md:col-start-5 md:col-span-5 md:row-span-2">
-            <div className="relative h-full min-h-[30rem] overflow-hidden rounded-[var(--radius-card)] bg-surface-muted">
-              <Image
-                src={candidate.images.journey}
-                alt="Paulinho Mendonça em fotografia de corpo inteiro produzida para a campanha"
-                fill
-                sizes="(max-width: 767px) 100vw, 42vw"
-                className="object-cover object-[center_12%]"
-              />
-            </div>
-          </Reveal>
-
+        <div className="mt-12 grid gap-5 md:grid-cols-12 md:items-start">
           {candidate.timeline.map((item, index) => (
             <Reveal
               key={item.title}
               delay={0.08 + index * 0.06}
               className={positions[index]}
             >
-              <article className="h-full border-t border-line pt-5">
-                <h3 className="font-display text-xl leading-tight font-semibold tracking-[-0.035em] text-ink sm:text-2xl">
+              <article className="h-full rounded-[var(--radius-card)] bg-surface-muted p-6 sm:p-8">
+                <h3 className="font-display text-2xl leading-[0.98] font-extrabold tracking-[-0.045em] text-ink sm:text-4xl">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-ink-muted">

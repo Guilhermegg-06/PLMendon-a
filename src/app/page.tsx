@@ -19,12 +19,12 @@ export default function HomePage() {
       <main>
         <Hero />
         <TextLoopBand />
-        <OfficialLinks />
         <About />
         <CampaignGallery />
         <FocusAreas />
         <FeaturedContentSection />
         <Trajectory />
+        <OfficialLinks />
         <FinalCta />
       </main>
       <SiteFooter />

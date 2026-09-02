@@ -21,12 +21,12 @@ const icons: ReactNode[] = [
 ];
 
 const cells = [
-  "md:col-span-7 md:row-span-2 bg-[#071a62] text-[#f5f7fb]",
-  "md:col-span-5 bg-accent text-[#05150b]",
+  "md:col-span-7 md:row-span-2 bg-[#071e9c] text-white",
+  "md:col-span-5 bg-[#00ff3c] text-[#08206b]",
   "md:col-span-5 bg-surface text-ink",
   "md:col-span-4 bg-surface-muted text-ink",
   "md:col-span-4 bg-surface text-ink",
-  "md:col-span-4 bg-[#071a62] text-[#f5f7fb]",
+  "md:col-span-4 bg-[#08206b] text-white",
 ] as const;
 
 export function FocusAreas() {
@@ -54,7 +54,7 @@ export function FocusAreas() {
                     index === 1
                       ? "border-accent"
                       : isDark
-                        ? "border-[#071a62]"
+                        ? "border-[#071e9c]"
                         : "border-line"
                   }`}
                 >
@@ -65,12 +65,12 @@ export function FocusAreas() {
                     {icons[index]}
                   </span>
                   <div className="relative mt-10">
-                    <h3 className="font-display text-2xl font-semibold tracking-[-0.035em]">
+                    <h3 className="font-display text-3xl leading-[0.96] font-extrabold tracking-[-0.045em]">
                       {area.title}
                     </h3>
                     <p
                       className={`mt-3 max-w-[36ch] text-sm leading-6 ${
-                        isDark ? "text-[#f5f7fb]/76" : index === 1 ? "text-[#062011]/76" : "text-ink-muted"
+                        isDark ? "text-white/76" : index === 1 ? "text-[#08206b]/76" : "text-ink-muted"
                       }`}
                     >
                       {area.description}

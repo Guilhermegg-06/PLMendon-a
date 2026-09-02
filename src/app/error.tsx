@@ -13,7 +13,7 @@ export default function ErrorPage({ reset }: { reset: () => void }) {
           className="mx-auto text-accent"
           aria-hidden="true"
         />
-        <h1 className="mt-6 font-display text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">
+        <h1 className="mt-6 font-display text-5xl leading-[0.9] font-extrabold tracking-[-0.06em] text-ink sm:text-7xl">
           Algo não carregou como esperado.
         </h1>
         <p className="mx-auto mt-5 max-w-md text-base leading-7 text-ink-muted">

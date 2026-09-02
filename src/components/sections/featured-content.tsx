@@ -9,8 +9,8 @@ export function FeaturedContentSection() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            title="Conteúdo para conhecer de perto."
-            description="Notícias e materiais reunidos manualmente a partir dos canais indicados pela campanha."
+            title="Conteúdo para ir além."
+            description="Notícias e materiais reunidos a partir dos canais indicados pela campanha."
           />
         </Reveal>
         <Reveal delay={0.08} amount={0.08}>

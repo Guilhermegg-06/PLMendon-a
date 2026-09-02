@@ -43,13 +43,13 @@ O Playwright usa `next start`; execute o build antes dos testes E2E. O comando `
 
 Edite `src/content/candidate.ts`. Número eleitoral e WhatsApp são condicionais: mantenha `null` até a confirmação e a interface continuará ocultando-os. Redes sem URL não são renderizadas. Atualize fontes apenas em `src/content/sources.ts`.
 
-Para trocar imagens, exporte derivados WebP/AVIF proporcionais ao uso, remova metadados desnecessários, salve em `public/candidate` e atualize `candidate.images`. Registre origem, dimensões e direitos em `docs/ASSET_MANIFEST.md`. Não versione arquivos `.CR2`, PSD, AI, vídeos brutos ou PDFs de impressão.
+Para trocar imagens, exporte derivados WebP/AVIF proporcionais ao uso, remova metadados desnecessários, salve em `public/candidate` e atualize `candidate.images` ou `candidate.closeUpSlides`. Registre origem, dimensões e direitos em `docs/ASSET_MANIFEST.md`. Não versione arquivos `.CR2`, PSD, AI, vídeos brutos ou PDFs de impressão.
 
 ## Direção visual
 
-A interface usa exclusivamente componentes da campanha: fotografias do Drive, azul profundo, verde, coração e wordmark tipográfico sem número. A marca e os ativos do site institucional não são usados. O redesign combina composição editorial, galeria assimétrica, carrossel por toque/teclado, loop tipográfico, blur progressivo, acabamento metálico e movimento coordenado com suporte a `prefers-reduced-motion`.
+A interface usa exclusivamente componentes da campanha, sem a marca institucional: fotografias autorizadas, coração e wordmark tipográfico sem número. A paleta reúne `#071E9C`, `#0057FF`, `#00F0FF`, `#00FF3C`, `#A71CFF`, `#08206B` e branco. Bricolage Grotesque dá presença editorial aos títulos; Manrope mantém a leitura do corpo. A experiência combina hero fotográfico quase integral, navegação inferior inspirada em aplicativos sociais, carrossel tátil com reprodução controlável, cartões tridimensionais e movimento com suporte a `prefers-reduced-motion`.
 
-Os efeitos foram adaptados das referências React Bits indicadas no briefing. Consulte `THIRD_PARTY_NOTICES.md` para autoria e licença. O perfil do Instagram exige autenticação; novas fotos devem ser exportadas e aprovadas pela campanha antes de entrarem no projeto.
+Os efeitos foram adaptados das referências React Bits e Uiverse indicadas no briefing. Consulte `THIRD_PARTY_NOTICES.md` para autoria e licença. Todo novo arquivo visual deve ser exportado e aprovado pela campanha antes de entrar no projeto.
 
 ## Vercel
 
@@ -57,7 +57,7 @@ Importe este repositório na Vercel, mantenha os comandos padrão do Next.js e c
 
 ## Git e GitHub
 
-O projeto usa GitHub Flow: `main` é estável e o MVP é desenvolvido em `feat/mvp-mobile`. Commits seguem Conventional Commits em português. Toda mudança deve passar pela Pull Request e não deve ser mesclada sem autorização.
+O projeto usa GitHub Flow: `main` é estável e o desenvolvimento acontece em branches `feat/*`. Commits seguem Conventional Commits em português. Toda mudança deve passar pela Pull Request e não deve ser mesclada sem autorização.
 
 ## Pendências
 

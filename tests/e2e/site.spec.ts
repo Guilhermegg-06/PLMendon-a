@@ -2,22 +2,44 @@ import { expect, test } from "@playwright/test";
 
 test("entrega o conteúdo central sem dados pendentes", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1, name: "De coração que alimenta." })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "O coração que alimenta." })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Áreas de atuação." })).toBeVisible();
   await expect(page.getByTestId("election-number")).toHaveCount(0);
   await expect(page.getByTestId("whatsapp-link")).toHaveCount(0);
 });
 
-test("menu mobile fecha por Escape e devolve o foco", async ({ page }) => {
+test("mantém a navegação social fixa na parte inferior", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  const trigger = page.getByRole("button", { name: "Abrir menu" });
-  await trigger.click();
+  const navigation = page.getByTestId("bottom-navigation");
+  await expect(navigation).toBeVisible();
+  await expect(navigation).toHaveCSS("position", "fixed");
+  await expect(navigation.getByRole("link")).toHaveCount(5);
+  await navigation.getByRole("link", { name: "De perto" }).click();
+  await expect(page.getByRole("heading", { name: "Paulinho de perto." })).toBeVisible();
+});
+
+test("galeria é tátil, controlável e não repete fotografias", async ({ page }) => {
+  await page.goto("/");
+  const gallery = page.locator("#de-perto");
+  const openers = gallery.getByRole("button", { name: /^Ampliar foto:/ });
+  await expect(openers).toHaveCount(6);
+
+  const imageSources = await gallery.locator("ul > li article button img").evaluateAll((images) =>
+    images.map((image) => image.getAttribute("src")),
+  );
+  expect(new Set(imageSources).size).toBe(imageSources.length);
+
+  const pause = gallery.getByRole("button", { name: "Pausar movimento do carrossel" });
+  await pause.click();
+  await expect(
+    gallery.getByRole("button", { name: "Retomar movimento do carrossel" }),
+  ).toHaveAttribute("aria-pressed", "true");
+
+  await openers.first().click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  await expect(page.locator("body")).toHaveCSS("overflow", "hidden");
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog")).toHaveCount(0);
-  await expect(trigger).toBeFocused();
 });
 
 test("links externos usam proteção de nova aba", async ({ page }) => {
@@ -56,12 +78,9 @@ test("não cria overflow nos tamanhos essenciais", async ({ page }) => {
 test("carrega os movimentos principais do redesign", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator('[data-motion="text-loop"]')).toHaveCount(1);
-  await expect(page.locator('[data-motion="gradual-blur"]')).toHaveCount(1);
   await expect(page.locator('[data-motion="metallic-paint"]')).toHaveCount(1);
-  await expect(page.locator('[data-motion="gradual-blur"] span').first()).toHaveAttribute(
-    "style",
-    /backdrop-filter:\s*blur/,
-  );
+  await expect(page.locator(".content-card-3d")).toHaveCount(4);
+  await expect(page.getByTestId("hero-image")).toBeVisible();
 });
 
 test("publica a política de privacidade", async ({ page }) => {

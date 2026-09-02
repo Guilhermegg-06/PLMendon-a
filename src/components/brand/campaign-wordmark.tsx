@@ -13,7 +13,7 @@ export function CampaignWordmark({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 font-display font-bold tracking-[-0.04em] text-ink",
+        "inline-flex items-center gap-2 font-display font-extrabold tracking-[-0.05em] text-ink",
         compact ? "text-lg" : "text-2xl",
         className,
       )}

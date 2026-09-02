@@ -38,6 +38,13 @@ export type TimelineItem = {
   validation: ValidationState;
 };
 
+export type CampaignSlide = {
+  src: string;
+  alt: string;
+  title: string;
+  description: string;
+};
+
 export type CandidateContent = {
   publicName: string;
   fullName: string;
@@ -60,6 +67,7 @@ export type CandidateContent = {
     heart: string;
     journey: string;
   };
+  closeUpSlides: CampaignSlide[];
   legal: {
     party: string | null;
     federationOrCoalition: string | null;

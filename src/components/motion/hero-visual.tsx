@@ -42,7 +42,7 @@ export function HeroVisual({ src, alt }: HeroVisualProps) {
         />
       </motion.div>
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-[#071a62]/20 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-[#071e9c]/20 to-transparent"
         aria-hidden="true"
       />
       <GradualBlur strength={1.15} />

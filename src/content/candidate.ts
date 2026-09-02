@@ -7,7 +7,7 @@ export const candidate: CandidateContent = {
   role: "Candidato a deputado estadual por Alagoas",
   state: "Alagoas",
   electionNumber: null,
-  slogan: "De coração que alimenta.",
+  slogan: "O coração que alimenta.",
   biography: {
     short:
       "Engenheiro civil, empresário e consultor com experiência em infraestrutura, gestão e projetos de impacto social em Alagoas.",
@@ -74,7 +74,7 @@ export const candidate: CandidateContent = {
     {
       network: "website",
       label: "Trajetória completa",
-      description: "Consulte a fonte institucional de biografia e notícias.",
+      description: "Consulte a fonte pública de biografia e notícias.",
       url: sources.institutionalSite,
       validation: "confirmed",
     },
@@ -157,6 +157,44 @@ export const candidate: CandidateContent = {
     heart: "/candidate/paulinho-coracao.webp",
     journey: "/candidate/paulinho-trajetoria.webp",
   },
+  closeUpSlides: [
+    {
+      src: "/candidate/paulinho-coracao.webp",
+      alt: "Paulinho Mendonça forma um coração com as mãos",
+      title: "Um gesto que virou compromisso",
+      description: "Cuidar das pessoas está no centro da presença de Paulinho em Alagoas.",
+    },
+    {
+      src: "/candidate/paulinho-trajetoria.webp",
+      alt: "Paulinho Mendonça em fotografia de corpo inteiro da campanha",
+      title: "Engenharia e gestão",
+      description: "Formação técnica e experiência para transformar planejamento em entrega.",
+    },
+    {
+      src: "/candidate/paulinho-servico-publico-hq.webp",
+      alt: "Registros de Paulinho Mendonça em ações de serviço público",
+      title: "Mais de 20 anos de serviço público",
+      description: "Uma trajetória construída perto de quem faz Alagoas acontecer.",
+    },
+    {
+      src: "/candidate/paulinho-major-izidoro-hq.webp",
+      alt: "Paulinho Mendonça em Major Izidoro, lugar de suas raízes",
+      title: "Raízes em Major Izidoro",
+      description: "Memória, pertencimento e conexão com o interior de Alagoas.",
+    },
+    {
+      src: "/candidate/paulinho-politica-hq.webp",
+      alt: "Paulinho Mendonça ao lado de alagoanos durante visita pública",
+      title: "Uma decisão por Alagoas",
+      description: "Entrar na política para ampliar o trabalho e fazer mais pelos alagoanos.",
+    },
+    {
+      src: "/candidate/paulinho-alagoas-sem-fome-hq.webp",
+      alt: "Paulinho Mendonça durante visita ligada ao Alagoas Sem Fome",
+      title: "Alagoas Sem Fome",
+      description: "O contato com as comunidades reforçou seu olhar sobre cuidado e dignidade.",
+    },
+  ],
   legal: {
     party: null,
     federationOrCoalition: null,

@@ -1,12 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
-const siteFont = Geist({
+const siteFont = Manrope({
   variable: "--font-site",
   subsets: ["latin"],
   display: "swap",
+});
+
+const displayFont = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  display: "swap",
+  axes: ["opsz", "wdth"],
 });
 
 export const metadata: Metadata = {
@@ -56,8 +63,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: "light dark",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f7fb" },
-    { media: "(prefers-color-scheme: dark)", color: "#070c21" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#08206b" },
   ],
 };
 
@@ -65,7 +72,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={siteFont.variable}>
+    <html
+      lang="pt-BR"
+      className={`${siteFont.variable} ${displayFont.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

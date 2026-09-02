@@ -4,15 +4,16 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full px-5 text-sm font-bold whitespace-nowrap transition-[transform,background-color,color,border-color] duration-200 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-2xl px-5 text-sm font-extrabold whitespace-nowrap transition-[transform,filter,box-shadow,background-color] duration-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.96] disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          "bg-accent text-on-accent hover:bg-accent-strong focus-visible:outline-offset-4",
+          "campaign-button text-white hover:brightness-110 focus-visible:outline-offset-4",
         secondary:
-          "border border-line bg-surface text-ink hover:border-accent hover:text-accent",
-        ghost: "text-ink hover:bg-surface-muted",
+          "campaign-button campaign-button-secondary text-ink hover:brightness-105",
+        ghost:
+          "border border-transparent bg-transparent text-ink shadow-none hover:bg-surface-muted",
       },
       size: {
         default: "h-12 px-5",

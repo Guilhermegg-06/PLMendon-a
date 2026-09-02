@@ -21,7 +21,7 @@ const icons: Record<SocialNetwork, ReactNode> = {
 };
 
 const cardStyles = [
-  "md:row-span-2 bg-[#071a62] text-[#f5f7fb] border-[#071a62] min-h-64 md:min-h-full",
+  "md:row-span-2 bg-[#071e9c] text-white border-[#071e9c] min-h-64 md:min-h-full",
   "bg-surface text-ink",
   "bg-surface-muted text-ink",
   "md:col-span-2 bg-surface text-ink",
@@ -63,11 +63,11 @@ export function OfficialLinks() {
                   />
                 </div>
                 <div className="mt-10">
-                  <h3 className="font-display text-2xl font-semibold tracking-[-0.035em]">
+                  <h3 className="font-display text-3xl leading-[0.96] font-extrabold tracking-[-0.045em]">
                     {social.label}
                   </h3>
                   <p
-                    className={`mt-2 max-w-[34ch] text-sm leading-6 ${index === 0 ? "text-[#f5f7fb]/76" : "text-ink-muted"}`}
+                    className={`mt-2 max-w-[34ch] text-sm leading-6 ${index === 0 ? "text-white/76" : "text-ink-muted"}`}
                   >
                     {social.description}
                   </p>

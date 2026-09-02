@@ -24,7 +24,7 @@ export default function PrivacyPage() {
             </Link>
           </Button>
 
-          <h1 className="mt-10 font-display text-4xl leading-tight font-semibold tracking-[-0.05em] text-ink sm:text-6xl">
+          <h1 className="mt-10 max-w-[11ch] font-display text-[clamp(3.4rem,9vw,7rem)] leading-[0.88] font-extrabold tracking-[-0.07em] text-ink">
             Política de privacidade
           </h1>
           <p className="mt-6 text-lg leading-8 text-ink-muted">
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
 
           <div className="mt-12 space-y-10 text-base leading-7 text-ink-muted">
             <section>
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
+              <h2 className="font-display text-3xl font-extrabold tracking-[-0.04em] text-ink">
                 Coleta de dados
               </h2>
               <p className="mt-3">
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
+              <h2 className="font-display text-3xl font-extrabold tracking-[-0.04em] text-ink">
                 Dados técnicos
               </h2>
               <p className="mt-3">
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
+              <h2 className="font-display text-3xl font-extrabold tracking-[-0.04em] text-ink">
                 Links externos
               </h2>
               <p className="mt-3">
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
+              <h2 className="font-display text-3xl font-extrabold tracking-[-0.04em] text-ink">
                 Atualizações e contato
               </h2>
               <p className="mt-3">

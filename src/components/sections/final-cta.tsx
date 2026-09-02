@@ -20,7 +20,7 @@ export function FinalCta() {
   return (
     <section id="contato" className="px-4 py-20 sm:px-6 md:py-28 lg:px-8">
       <Reveal className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-[var(--radius-card)] bg-[#071a62] p-6 text-[#f5f7fb] sm:p-10 md:p-14 lg:p-16">
+        <div className="relative overflow-hidden rounded-[var(--radius-card)] bg-[#071e9c] p-6 text-white sm:p-10 md:p-14 lg:p-16">
           <div
             className="pointer-events-none absolute -top-24 -right-20 size-72 rounded-full border-[56px] border-accent/16"
             aria-hidden="true"
@@ -28,11 +28,11 @@ export function FinalCta() {
           <AnimatedIcon className="text-accent">
             <HeartStraight size={34} weight="fill" />
           </AnimatedIcon>
-          <h2 className="relative mt-8 max-w-[12ch] font-display text-4xl leading-[1.02] font-semibold tracking-[-0.05em] sm:text-5xl lg:text-6xl">
+          <h2 className="relative mt-8 max-w-[10ch] font-display text-[clamp(3.25rem,8vw,7rem)] leading-[0.88] font-extrabold tracking-[-0.07em]">
             {conversationLead}{" "}
             <MetallicPaint>{conversationRest.join(" ")}</MetallicPaint>
           </h2>
-          <p className="relative mt-5 max-w-[42ch] text-base leading-7 text-[#f5f7fb]/76 sm:text-lg">
+          <p className="relative mt-6 max-w-[42ch] text-base leading-7 font-medium text-white/76 sm:text-xl">
             Acompanhe Paulinho, participe da conversa e receba as atualizações pelos canais oficiais.
           </p>
 
