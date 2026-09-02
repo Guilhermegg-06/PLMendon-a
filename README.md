@@ -53,7 +53,11 @@ Os efeitos foram adaptados das referências React Bits e Uiverse indicadas no br
 
 ## Vercel
 
-Importe este repositório na Vercel, mantenha os comandos padrão do Next.js e configure `NEXT_PUBLIC_SITE_URL` com o domínio final. Não há deploy automático neste repositório. Antes da produção, conclua `CONTENT_TODO.md` e `docs/LAUNCH_CHECKLIST.md`.
+O repositório está preparado para a integração GitHub → Vercel. Use o preset Next.js, mantenha a raiz do projeto em `.` e os comandos automáticos de instalação e build. Cada push na branch acompanhada pela Vercel inicia um novo deployment.
+
+`NEXT_PUBLIC_SITE_URL` é opcional para previews e pode ser configurada com o domínio canônico quando ele for definido. Se estiver vazia ou ausente, o projeto usa `VERCEL_PROJECT_PRODUCTION_URL`, depois `VERCEL_URL` e, fora da Vercel, `http://localhost:3000`. No painel, mantenha habilitada a exposição automática das variáveis de sistema da Vercel.
+
+Antes da publicação eleitoral definitiva, conclua `CONTENT_TODO.md` e `docs/LAUNCH_CHECKLIST.md`.
 
 ## Git e GitHub
 

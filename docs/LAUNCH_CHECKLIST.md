@@ -28,10 +28,12 @@
 
 ## Produto e publicação
 
+- [x] Permitir build de preview sem `NEXT_PUBLIC_SITE_URL` obrigatória.
 - [ ] Executar instalação limpa, lint, typecheck, testes, build e Playwright.
 - [ ] Revisar 320 px, 390 px, tablet, desktop e modo paisagem.
 - [ ] Testar teclado, foco, movimento reduzido, contraste e zoom em 200%.
 - [ ] Confirmar ausência de analytics, pixels e formulários não autorizados.
-- [ ] Configurar `NEXT_PUBLIC_SITE_URL` na Vercel.
+- [ ] Configurar `NEXT_PUBLIC_SITE_URL` com o domínio canônico quando ele for definido.
+- [ ] Manter habilitada a exposição automática das variáveis de sistema da Vercel.
 - [ ] Revisar Open Graph, favicon, sitemap e robots no domínio final.
 - [ ] Obter aprovação explícita antes do merge e da publicação em produção.
