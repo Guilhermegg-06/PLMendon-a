@@ -39,6 +39,7 @@ test("respeita movimento reduzido", async ({ page }) => {
 });
 
 test("não cria overflow nos tamanhos essenciais", async ({ page }) => {
+  await page.goto("/");
   for (const viewport of [
     { width: 320, height: 568 },
     { width: 390, height: 844 },
@@ -47,10 +48,20 @@ test("não cria overflow nos tamanhos essenciais", async ({ page }) => {
     { width: 844, height: 390 },
   ]) {
     await page.setViewportSize(viewport);
-    await page.goto("/");
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow).toBeLessThanOrEqual(0);
   }
+});
+
+test("carrega os movimentos principais do redesign", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator('[data-motion="text-loop"]')).toHaveCount(1);
+  await expect(page.locator('[data-motion="gradual-blur"]')).toHaveCount(1);
+  await expect(page.locator('[data-motion="metallic-paint"]')).toHaveCount(1);
+  await expect(page.locator('[data-motion="gradual-blur"] span').first()).toHaveAttribute(
+    "style",
+    /backdrop-filter:\s*blur/,
+  );
 });
 
 test("publica a política de privacidade", async ({ page }) => {
