@@ -15,6 +15,9 @@ test-results/
 .env.*
 !.env.example
 
+# local task instructions
+/prompt
+
 # logs
 *.log
 
