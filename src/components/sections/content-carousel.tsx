@@ -84,7 +84,7 @@ export function ContentCarousel({ items }: ContentCarouselProps) {
                 rel="noopener noreferrer"
                 className={`group flex h-full min-h-72 flex-col justify-between rounded-[var(--radius-card)] border p-6 transition-[transform,border-color] duration-300 hover:-translate-y-1 focus-visible:border-accent sm:p-7 ${
                   featured
-                    ? "border-[#071a62] bg-[#071a62] text-white lg:min-h-96"
+                    ? "border-[#071a62] bg-[#071a62] text-[#f5f7fb] lg:min-h-96"
                     : "border-line bg-surface text-ink"
                 }`}
               >
@@ -113,7 +113,7 @@ export function ContentCarousel({ items }: ContentCarouselProps) {
                     {item.title}
                   </h3>
                   <p
-                    className={`mt-4 max-w-[48ch] text-sm leading-6 ${featured ? "text-white/76" : "text-ink-muted"}`}
+                    className={`mt-4 max-w-[48ch] text-sm leading-6 ${featured ? "text-[#f5f7fb]/76" : "text-ink-muted"}`}
                   >
                     {item.summary}
                   </p>

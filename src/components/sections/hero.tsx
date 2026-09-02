@@ -56,7 +56,7 @@ export function Hero() {
       <a
         href="#links-oficiais"
         aria-label="Continuar para os links oficiais"
-        className="absolute bottom-4 left-1/2 hidden size-11 -translate-x-1/2 items-center justify-center rounded-full border border-line bg-surface/90 text-ink shadow-[var(--shadow-soft)] backdrop-blur-md transition-colors hover:border-accent hover:text-accent md:flex"
+        className="absolute bottom-4 left-1/2 flex size-11 -translate-x-1/2 items-center justify-center rounded-full border border-line bg-surface/90 text-ink shadow-[var(--shadow-soft)] backdrop-blur-md transition-colors hover:border-accent hover:text-accent"
       >
         <AnimatedIcon>
           <ArrowDown size={19} weight="bold" />

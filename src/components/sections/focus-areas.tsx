@@ -21,12 +21,12 @@ const icons: ReactNode[] = [
 ];
 
 const cells = [
-  "md:col-span-7 md:row-span-2 bg-[#071a62] text-white",
+  "md:col-span-7 md:row-span-2 bg-[#071a62] text-[#f5f7fb]",
   "md:col-span-5 bg-accent text-[#05150b]",
   "md:col-span-5 bg-surface text-ink",
   "md:col-span-4 bg-surface-muted text-ink",
   "md:col-span-4 bg-surface text-ink",
-  "md:col-span-4 bg-[#071a62] text-white",
+  "md:col-span-4 bg-[#071a62] text-[#f5f7fb]",
 ] as const;
 
 export function FocusAreas() {
@@ -70,7 +70,7 @@ export function FocusAreas() {
                     </h3>
                     <p
                       className={`mt-3 max-w-[36ch] text-sm leading-6 ${
-                        isDark ? "text-white/76" : index === 1 ? "text-[#062011]/76" : "text-ink-muted"
+                        isDark ? "text-[#f5f7fb]/76" : index === 1 ? "text-[#062011]/76" : "text-ink-muted"
                       }`}
                     >
                       {area.description}
