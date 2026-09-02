@@ -1,9 +1,27 @@
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
+import { About } from "@/components/sections/about";
+import { FeaturedContentSection } from "@/components/sections/featured-content";
+import { FinalCta } from "@/components/sections/final-cta";
+import { FocusAreas } from "@/components/sections/focus-areas";
+import { Hero } from "@/components/sections/hero";
+import { OfficialLinks } from "@/components/sections/official-links";
+import { Trajectory } from "@/components/sections/trajectory";
+
 export default function HomePage() {
   return (
-    <main className="grid min-h-[100dvh] place-items-center px-4">
-      <h1 className="font-display text-4xl font-semibold tracking-tight">
-        Paulinho Mendonça
-      </h1>
-    </main>
+    <>
+      <SiteHeader />
+      <main>
+        <Hero />
+        <OfficialLinks />
+        <About />
+        <FocusAreas />
+        <FeaturedContentSection />
+        <Trajectory />
+        <FinalCta />
+      </main>
+      <SiteFooter />
+    </>
   );
 }
