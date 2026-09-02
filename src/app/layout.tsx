@@ -1,16 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import { Geist } from "next/font/google";
 import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
-const bodyFont = Manrope({
-  variable: "--font-body",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const displayFont = Space_Grotesk({
-  variable: "--font-display",
+const siteFont = Geist({
+  variable: "--font-site",
   subsets: ["latin"],
   display: "swap",
 });
@@ -71,7 +65,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${bodyFont.variable} ${displayFont.variable}`}>
+    <html lang="pt-BR" className={siteFont.variable}>
       <body>{children}</body>
     </html>
   );

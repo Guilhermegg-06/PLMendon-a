@@ -5,6 +5,7 @@ import {
   WhatsappLogo,
 } from "@phosphor-icons/react/ssr";
 import { AnimatedIcon } from "@/components/motion/animated-icon";
+import { MetallicPaint } from "@/components/motion/metallic-paint";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { candidate } from "@/content/candidate";
@@ -13,6 +14,8 @@ export function FinalCta() {
   const instagram = candidate.socials.find(
     (social) => social.network === "instagram",
   );
+  const [conversationLead, ...conversationRest] =
+    candidate.ctas.conversation.split(" ");
 
   return (
     <section id="contato" className="px-4 py-20 sm:px-6 md:py-28 lg:px-8">
@@ -26,7 +29,8 @@ export function FinalCta() {
             <HeartStraight size={34} weight="fill" />
           </AnimatedIcon>
           <h2 className="relative mt-8 max-w-[12ch] font-display text-4xl leading-[1.02] font-semibold tracking-[-0.05em] sm:text-5xl lg:text-6xl">
-            {candidate.ctas.conversation}
+            {conversationLead}{" "}
+            <MetallicPaint>{conversationRest.join(" ")}</MetallicPaint>
           </h2>
           <p className="relative mt-5 max-w-[42ch] text-base leading-7 text-[#f5f7fb]/76 sm:text-lg">
             Acompanhe Paulinho, participe da conversa e receba as atualizações pelos canais oficiais.

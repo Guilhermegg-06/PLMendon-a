@@ -11,8 +11,8 @@
   --accent-strong: #0d9e3d;
   --on-accent: #05150b;
   --focus: #071a62;
-  --radius-card: 1rem;
-  --shadow-soft: 0 20px 60px rgb(7 26 98 / 0.13);
+  --radius-card: 0.375rem;
+  --shadow-soft: 0 24px 72px rgb(7 26 98 / 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,8 +41,8 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-on-accent: var(--on-accent);
-  --font-sans: var(--font-body);
-  --font-display: var(--font-display);
+  --font-sans: var(--font-site);
+  --font-display: var(--font-site);
 }
 
 * {
@@ -61,7 +61,7 @@ body {
   overflow-x: clip;
   background: var(--page);
   color: var(--ink);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-site), -apple-system, BlinkMacSystemFont, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -80,7 +80,7 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Layer scale: page 0, sticky header 40, dialog overlay 50, dialog panel 60. */
+/* Layer scale: page 0, sticky header 40, dialog overlay 50, dialog panel 60, progress 70. */
 
 .spotlight-card::before {
   position: absolute;
@@ -117,6 +117,37 @@ button {
 
 .menu-panel[data-state="closed"] {
   animation: menu-panel-out 200ms ease-in;
+}
+
+.metallic-paint {
+  display: inline-block;
+  color: transparent;
+  background:
+    linear-gradient(
+      112deg,
+      #88f5a4 0%,
+      #17c950 22%,
+      #effff3 42%,
+      #0d9e3d 58%,
+      #b8f9c8 78%,
+      #17c950 100%
+    );
+  background-size: 240% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: metallic-shift 5.5s cubic-bezier(0.16, 1, 0.3, 1) infinite alternate;
+  filter: drop-shadow(0 1px 0 rgb(245 247 251 / 0.22));
+}
+
+@keyframes metallic-shift {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  [data-motion="gradual-blur"] {
+    display: none;
+  }
 }
 
 @keyframes menu-overlay-in {

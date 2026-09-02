@@ -49,7 +49,7 @@ export function OfficialLinks() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex h-full min-h-44 flex-col justify-between rounded-[var(--radius-card)] border border-line p-6 shadow-[var(--shadow-soft)] transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-accent focus-visible:border-accent ${cardStyles[index]}`}
+                className={`group flex h-full min-h-44 flex-col justify-between rounded-[var(--radius-card)] border border-line p-6 transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-accent focus-visible:border-accent ${cardStyles[index]}`}
               >
                 <div className="flex items-start justify-between gap-4">
                   <AnimatedIcon className="text-accent">
