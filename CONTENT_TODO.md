@@ -8,6 +8,7 @@ Antes da publicação definitiva, a equipe da campanha deve:
 - [ ] Aprovar a biografia curta, a trajetória e cada área de atuação marcada como `review`.
 - [ ] Validar se os links reunidos em `src/content/sources.ts` continuam oficiais.
 - [ ] Confirmar os direitos de uso das três fotografias exportadas do Drive da campanha.
+- [ ] Fornecer exportações aprovadas de novas fotos do Instagram. O acesso público do perfil exige autenticação e nenhum arquivo foi copiado sem autorização.
 - [ ] Aprovar o aviso eleitoral e a política de privacidade com o responsável jurídico.
 - [ ] Revisar textos, imagens e metadados antes de conectar o domínio de produção.
 

@@ -4,7 +4,7 @@ Landing page mobile-first da campanha de Paulinho Mendonça para deputado estadu
 
 ## Stack
 
-Next.js 16 com App Router, React 19, TypeScript estrito, Tailwind CSS 4, Motion, componentes Radix/shadcn, Phosphor Icons, Vitest, React Testing Library e Playwright. O gerenciador é pnpm 11 e a versão mínima do Node.js é 22.14.
+Next.js 16 com App Router, React 19, TypeScript estrito, Tailwind CSS 4, Motion, GSAP, componentes Radix/shadcn, Phosphor Icons, Vitest, React Testing Library e Playwright. O gerenciador é pnpm 11 e a versão mínima do Node.js é 22.14.
 
 ## Executar localmente
 
@@ -47,7 +47,9 @@ Para trocar imagens, exporte derivados WebP/AVIF proporcionais ao uso, remova me
 
 ## Direção visual
 
-A interface usa exclusivamente componentes da campanha: fotografias do Drive, azul profundo, verde, coração e wordmark tipográfico sem número. A marca e os ativos do site institucional não são usados. O layout evita estética de santinho e adota composição editorial, bento assimétrico, carrossel por toque/teclado e movimento coordenado com suporte a `prefers-reduced-motion`.
+A interface usa exclusivamente componentes da campanha: fotografias do Drive, azul profundo, verde, coração e wordmark tipográfico sem número. A marca e os ativos do site institucional não são usados. O redesign combina composição editorial, galeria assimétrica, carrossel por toque/teclado, loop tipográfico, blur progressivo, acabamento metálico e movimento coordenado com suporte a `prefers-reduced-motion`.
+
+Os efeitos foram adaptados das referências React Bits indicadas no briefing. Consulte `THIRD_PARTY_NOTICES.md` para autoria e licença. O perfil do Instagram exige autenticação; novas fotos devem ser exportadas e aprovadas pela campanha antes de entrarem no projeto.
 
 ## Vercel
 
